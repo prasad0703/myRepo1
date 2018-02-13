@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" allow-return-values="true" parallel="false"
+	verbose="1" thread-count="2">
+
+	<!-- <listeners>
+		<listener class-name="com.elliemae.core.Reporter.CustomReporter" />
+		<listener class-name="com.elliemae.core.listener.RetryListener" />
+		<listener class-name="com.elliemae.core.listener.PostTestListener" />
+	</listeners> -->
+
+	<parameter name="environmentName" value="STAGEWEB"></parameter>
+	<parameter name="environmentUserName" value=""></parameter>
+	<parameter name="environmentPassword" value=""></parameter>
+	<parameter name="environmentClientID" value="BE11170520"></parameter>
+	<parameter name="jenkinsJobName" value=""></parameter>
+	<parameter name="updateTestStatusToJIRA" value="no"></parameter>
+	<parameter name="jiraProjectName" value="EMATF"></parameter>
+	<parameter name="testCycleVersion" value="ATF 2.3"></parameter>
+
+	<test name="ECRMChromeTests">
+		<parameter name="platform" value="Web" />
+		<parameter name="browserName" value="Chrome" />
+		<classes>
+		
+
+
+			<class name="myPackage.MyMain">
+				<methods>
+					<include name="sampleTest1"></include>
+					<include name="sampleTest2"></include>
+					<include name="sampleTest3"></include>
+				</methods>
+			</class>
+		
+<!-- 			<class name="com.elliemae.testcases.Tools.ToolsTest"> -->
+<!-- 				<methods>					 -->
+<!-- 					<include name="testCustomerContactEquityPageIsEditable"></include> -->
+<!-- 					<include name="testProspectEquityPageErrorMessages"></include>	 -->
+<!-- 					<include name="testProspectRecordEquityAndLoanOptionsPage"></include> -->
+<!-- 					<include name="testCustomerContactRecordEquityAndLoanOptionsPage"></include> -->
+<!-- 					<include name="testCustomerContactEquityPageErrorMessages"></include> -->
+<!-- 					<include name="testProspectLoanOptionsPageErrorMessages"></include> -->
+<!-- 					<include name="testCustomerContactLoanOptionsPageErrorMessages"></include> -->
+<!-- 					<include name="testCustomerContactLoanOptionsPageNotEditable"></include> -->
+<!-- 					<include name="testCustomerContactLoanOptionsPageIsEditable"></include>					 -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+
+<!-- 			<class name="com.elliemae.testcases.Contacts.AddNewContactTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="testAddContact"></include> -->
+<!-- 					<include name="testAddReferralPartnerContact"></include> -->
+<!-- 					<include name="addNewRealEstateAgentTest"></include> -->
+<!-- 					<include name="addNewProspectiveEmployeeTest"></include> -->
+<!-- 					<include name="addNewCustomerContactTest"></include> -->
+<!-- 					<include name="addNewCancelButtonTest"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+			
+<!-- 			<class name="com.elliemae.testcases.Hotlist.HotlistTests"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="testhotlistLoanAmountHasValue"></include>	 -->
+<!-- 					<include name="testhotlistRemainingBalanceForRecord"></include>								 -->
+<!-- 					<include name="hotlistAddActionNote"></include> -->
+<!-- 					<include name="hotlistCustomerRecordTypeFilterTest"></include> -->
+<!-- 					<include name="hotlistFollowupRecordsTest"></include> -->
+<!-- 					<include name="hotlistFollowupTriggerFilterTest"></include> -->
+<!-- 					<include name="hotlistInterestRateFilterAscendingTest"></include> -->
+<!-- 					<include name="hotlistInterestRateFilterDescendingTest"></include> -->
+<!-- 					<include name="hotlistProspectRecordTypeFilterTest"></include> -->
+<!-- 					<include name="hotlistRatesTriggerFilterTest"></include> -->
+<!-- 					<include name="hotlistRefinanceRecordsTest"></include> -->
+<!-- 					<include name="hotlistSelectAndDeselectAllTest"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+
+<!-- 			<class name="com.elliemae.testcases.Contacts.ContactTests"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="editContactTest"></include> -->
+<!-- 					<include name="addCustomRecordType"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+			
+<!-- 			<class name="com.elliemae.testcases.Contacts.ContactsTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="testProspectContacts"></include> -->
+<!-- 					<include name="testCustomerContacts"></include> -->
+<!-- 					<include name="testReferralPartnerContacts"></include> -->
+<!-- 					<include name="testOtherContacts"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+
+<!-- 			<class name="com.elliemae.testcases.ContactDetails.ProspectContactDetailsTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="testCampaignTab"></include> -->
+<!-- 					<include name="testHotlistSettingsTab"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+
+<!-- 			<class name="com.elliemae.testcases.ContactDetails.CustomerContactDetailsTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="testCustomerTab"></include>  -->
+<!-- 					<include name="testLoanTab"></include>  -->
+<!-- 					<include name="testHistoryTab"></include>  -->
+<!-- 					<include name="testActionTab"></include>  -->
+<!-- 					<include name="testMilestoneTab"></include>  -->
+<!-- 					<include name="testCampaignTab"></include>  -->
+<!-- 					<include name="testCustomTab"></include>  -->
+<!-- 					<include name="testSettingsTab"></include>  -->
+<!-- 					<include name="testEmploymentTab"></include> -->
+<!-- 					<include name="testHotlistSettingsTab"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+		</classes>
+	</test>
+
+</suite>

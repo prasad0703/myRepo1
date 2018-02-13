@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" allow-return-values="true">
+  <parameter name="jenkinsJobName" value=""/>
+  <parameter name="environmentUserName" value=""/>
+  <parameter name="environmentName" value="STAGEWEB"/>
+  <parameter name="environmentPassword" value=""/>
+  <parameter name="environmentClientID" value="BE11170520"/>
+  <parameter name="jiraProjectName" value="EMATF"/>
+  <parameter name="testCycleVersion" value="ATF 2.3"/>
+  <parameter name="updateTestStatusToJIRA" value="no"/>
+  <test name="ECRMChromeTests(failed)">
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="platform" value="Web"/>
+    <classes>
+      <class name="myPackage.MyMain">
+        <methods>
+          <include name="afterClass"/>
+          <include name="sampleTest2"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="sampleTest3"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- myPackage.MyMain -->
+    </classes>
+  </test> <!-- ECRMChromeTests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

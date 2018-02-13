@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19342" started-at="2018-02-13T11:56:05Z" finished-at="2018-02-13T11:56:24Z">
+    <groups>
+    </groups>
+    <test name="ECRMChromeTests" duration-ms="19342" started-at="2018-02-13T11:56:05Z" finished-at="2018-02-13T11:56:24Z">
+      <class name="myPackage.MyMain">
+        <test-method status="PASS" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="beforeTest" is-config="true" duration-ms="137" started-at="2018-02-13T17:26:05Z" finished-at="2018-02-13T17:26:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f05988]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="beforeClass" is-config="true" duration-ms="10208" started-at="2018-02-13T17:26:05Z" finished-at="2018-02-13T17:26:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f05988]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod([Ljava.lang.Object;)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2018-02-13T17:26:16Z" finished-at="2018-02-13T17:26:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@a33c24]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="sampleTest1(java.util.HashMap)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="sampleTest1" duration-ms="2027" started-at="2018-02-13T17:26:16Z" data-provider="myTestDataProvider" finished-at="2018-02-13T17:26:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TEST_END=, EXECUTE=Yes, MODULE=REPORTS, JIRAID=S0000, USERNAME=User_SSA1, INPUTDATA={"Company" : "Prosperity Home Mortgage, LLC","runReportAlertMessage":"The report is currently processing.  You will receive an email when processing is complete.","BusinessAnalysisReport":"521 Prosperity Home Mortgage (VA) Alan M Sanders","BAReportType":"LO Performance","SurveyName":"Prosperity Listing Agent Survey"}, TEST DESCRIPTION=Test Case 13027: Smoke Test - Reports, TEST_CASE_NAME=sampleTest1}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest1 -->
+        <test-method status="FAIL" signature="sampleTest2()[pri:0, instance:myPackage.MyMain@1ef45e3]" name="sampleTest2" duration-ms="1776" started-at="2018-02-13T17:26:18Z" finished-at="2018-02-13T17:26:20Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:This assertion is also failed expected [true] but found [false],Again assert failed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:This assertion is also failed expected [true] but found [false],Again assert failed expected [true] but found [false]at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)at myPackage.MyMain.sampleTest2(MyMain.java:37)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest2 -->
+        <test-method status="PASS" signature="beforeMethod([Ljava.lang.Object;)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-02-13T17:26:18Z" finished-at="2018-02-13T17:26:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1dd05a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="sampleTest3()[pri:0, instance:myPackage.MyMain@1ef45e3]" name="sampleTest3" duration-ms="1345" started-at="2018-02-13T17:26:20Z" finished-at="2018-02-13T17:26:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:This is it]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:This is itat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)at myPackage.MyMain.sampleTest3(MyMain.java:44)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest3 -->
+        <test-method status="PASS" signature="beforeMethod([Ljava.lang.Object;)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-02-13T17:26:20Z" finished-at="2018-02-13T17:26:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@13a8ee1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:myPackage.MyMain@1ef45e3]" name="afterClass" is-config="true" duration-ms="2933" started-at="2018-02-13T17:26:21Z" finished-at="2018-02-13T17:26:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest(org.testng.ITestContext)[pri:0, instance:myPackage.MyMain@1ef45e3]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-02-13T17:26:24Z" finished-at="2018-02-13T17:26:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f05988]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- myPackage.MyMain -->
+    </test> <!-- ECRMChromeTests -->
+  </suite> <!-- Suite -->
+</testng-results>
