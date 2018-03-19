@@ -26,7 +26,7 @@ public class MyMain {
 	
 	
 	//all bounded types as class level can be applied at method level
-	public <T extends Number> void m() {}
+	public <T extends Number, X> void m(T t, X a) {}
 	
 	//below code not compiled as it's having same erasure
 	//public static void a(ArrayList<String> a) {}
