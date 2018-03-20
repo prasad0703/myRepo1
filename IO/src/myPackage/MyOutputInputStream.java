@@ -24,14 +24,15 @@ public class MyOutputInputStream {
 		bos1.flush();
 		fos1.close();
 		//--------ByteArrayOutputStream-------
-		ByteArrayOutputStream baos1 = new ByteArrayOutputStream();//write common data into byte array
+		ByteArrayOutputStream baos1 = new ByteArrayOutputStream();//write common data into byte array output stream
 		//which can be forwarded to multiple streams later.
 		FileOutputStream fos2 = new FileOutputStream(".txt");
 		FileOutputStream fos3 = new FileOutputStream(".txt");
 		baos1.write(65);
+		//baos1.flush();
 		baos1.writeTo(fos2);
 		baos1.writeTo(fos3);
-		baos1.flush();
+		
 		baos1.close();
 		
 		//--------FileInputStream-------
@@ -39,14 +40,14 @@ public class MyOutputInputStream {
 		System.out.println(fis1.read());
 		int charInt = 0;
 		while((charInt=fis1.read())!=-1) {
-			System.out.println((char)charInt);
+			System.out.println((char) charInt);
 		}
 		//--------BufferedInputStream-------
 		BufferedInputStream bis1 = new BufferedInputStream(fis1);
 		System.out.println(bis1.read());
 		int charInt2 = 0;
 		while((charInt2=bis1.read())!=-1) {
-			System.out.println((char)charInt2);
+			System.out.println((char) charInt2);
 		}
 		fis1.close();
 		//--------ByteArrayInputStream-------
@@ -54,7 +55,7 @@ public class MyOutputInputStream {
 		ByteArrayInputStream bais1 = new ByteArrayInputStream(bArray1);//read the data from byte array
 		int charInt3 = 0;
 		while((charInt3=bais1.read())!=-1) {
-			System.out.println((char)charInt3);
+			System.out.println((char) charInt3);
 		}
 		bais1.close();
 	}

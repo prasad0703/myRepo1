@@ -32,7 +32,7 @@ public class MyWriteReader {
 		caw1.write("This is String");
 		caw1.writeTo(fw2);
 		caw1.writeTo(fw3);
-		caw1.flush();
+		//caw1.flush();
 		caw1.close();
 		//--------FileReader-------
 		FileReader fr1 = new FileReader(".txt");//reads character oriented data from file
