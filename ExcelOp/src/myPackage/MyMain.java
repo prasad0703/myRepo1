@@ -82,7 +82,7 @@ public class MyMain {
 			while(cItr.hasNext()) {
 				Cell cellX = cItr.next();
 				CellType ct;
-				switch(cellX.getCellTypeEnum()) {
+				switch(cellX.getCellTypeEnum()) {//_NONE,BLANK,BOOLEAN,FORMULA,NUMERIC,STRING,ERROR
 				case NUMERIC:
 					System.out.print(cellX.getNumericCellValue()+"\t");
 					break;
