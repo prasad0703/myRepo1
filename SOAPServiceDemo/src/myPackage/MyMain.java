@@ -2,7 +2,6 @@ package myPackage;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,13 +26,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+
 public class MyMain {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, ParserConfigurationException, SAXException, XPathExpressionException {
 		//------Read request
-		File f = new File("");
-		System.out.println(f.getAbsolutePath());
-		InputStream is = new FileInputStream(f.getAbsolutePath()+"//src//input//req.txt");
+		InputStream is = new FileInputStream("src\\input\\req.txt");
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(isr);
 		String strRequest = "";
@@ -41,8 +39,8 @@ public class MyMain {
 		while((str = br.readLine())!=null) {
 			strRequest = strRequest+str;
 		}
-		//-----------------------------------
-		HttpClient hc = HttpClients.createDefault();
+		br.close();
+		
 		//------------------create URI for post method-----------------
 		//provide endpoint for operation
 		URI uri = new URI("https://www.w3schools.com/xml/tempconvert.asmx");
@@ -54,12 +52,18 @@ public class MyMain {
 		
 		//------------------create entity of post method-----------------
 		StringEntity se = new StringEntity(strRequest);
-		se.setContentEncoding("utf-8");
 		se.setContentType("text/xml");
+		se.setContentEncoding("utf-8");
+		
+		//------------------set entity for post method-----------------
 		hp.setEntity(se);
 		
+		//-----------------------------------
+		HttpClient hc = HttpClients.createDefault();
 		HttpResponse hr = hc.execute(hp);
 		System.out.println(hr.getStatusLine());
+		System.out.println("--------------------------------------------------");
+		System.out.println(hr.getStatusLine().getStatusCode());
 		System.out.println("--------------------------------------------------");
 		System.out.println(hr.getEntity());
 		System.out.println("--------------------------------------------------");
