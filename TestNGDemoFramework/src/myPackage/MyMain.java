@@ -12,7 +12,8 @@ import org.testng.annotations.Test;
 2.All TestNG libs
 3.All Apache - POI
 4.All Apache - log4j
-5.Fillo*/
+5.Fillo
+6.chromedriver.exe*/
 
 
 @Listeners({CustomTestListener.class})
@@ -36,16 +37,16 @@ public class MyMain extends BaseClass {
 		sAssert.assertTrue(true);
 		sAssert.assertAll();
 	}
-	@Test
-	public void sampleTest2() throws InterruptedException {
+	@Test(dataProvider = "myTestDataProvider")
+	public void sampleTest2(HashMap<String, String> testDataMap) throws InterruptedException {
 		logger.info("This is my Test: SampleTest2");
 		Thread.sleep(1000);
 		sAssert.assertTrue(false, "This assertion is also failed");
 		sAssert.assertTrue(false, "Again assert failed");
 		sAssert.assertAll();
 	}
-	@Test
-	public void sampleTest3() throws InterruptedException {
+	@Test(dataProvider = "myTestDataProvider")
+	public void sampleTest3(HashMap<String, String> testDataMap) throws InterruptedException {
 		logger.info("This is my Test: SampleTest3");
 		Thread.sleep(1000);
 		sAssert.fail("This is it");

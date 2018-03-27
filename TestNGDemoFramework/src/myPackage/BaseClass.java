@@ -34,7 +34,7 @@ public class BaseClass {
 		for(ITestNGMethod arrMethod : arrMethods) {
 			System.out.println(arrMethod.getMethodName());
 		}
-		context.setAttribute("driverInstance", driver);
+		//context.setAttribute("driverInstance", driver);
 		//initialize log4j
 		System.setProperty("testMethodName", context.getCurrentXmlTest().getName());
 		System.setProperty("logfilename", ""+System.currentTimeMillis());
@@ -47,16 +47,17 @@ public class BaseClass {
 		if(strBrowserName.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "E:\\Tech\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 			driver.get("https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=cJqCWsqbMq-dX57HgZgL");
 		}
-		
 	}
 	@BeforeMethod
 	public void beforeMethod(Object[] testArgs) {
 		//initialize assert
 		sAssert = new CustomSoftAssert(driver);
+		HashMap<String, String> testDataMap = (HashMap<String, String>) testArgs[0]; 
+		System.out.println("Test Description: "+testDataMap.get("TEST DESCRIPTION"));
 	}
 	
 	@AfterClass
@@ -70,9 +71,16 @@ public class BaseClass {
 		
 		Collection<ITestNGMethod> passedTestMethods = context.getPassedTests().getAllMethods();
 		System.out.println("This is it***********************");
-		//System.out.println(passedTestMethods.toString());
+		System.out.println("Passed Tests: ");
+		for(ITestNGMethod passedTestMethod : passedTestMethods) {
+			System.out.println("\t"+passedTestMethod.getQualifiedName());
+		}
+		System.out.println();
 		Collection<ITestNGMethod> failedTestMethods = context.getFailedTests().getAllMethods();
-		//System.out.println(failedTestMethods.toString());
+		System.out.println("Failed Tests: ");
+		for(ITestNGMethod failedTestMethod : failedTestMethods) {
+			System.out.println("\t"+failedTestMethod.getQualifiedName());
+		}
 	}
 	
 	
@@ -86,11 +94,11 @@ public class BaseClass {
 		Connection con = f.getConnection("src\\TestData\\Test_Data.xlsx");
 		Recordset rs = con.executeQuery("Select * from TestData where Test_Case_Name = '"+testCaseName+"'");
 		List<HashMap<String, String>> testDataList = new ArrayList<HashMap<String, String>>();
-			
+		int colSize = rs.getFieldNames().size();
 		while(rs.hasNext()) {
 			rs.moveNext();
 			HashMap<String, String> testDataMap = new HashMap<String, String>();
-			for(int i = 0; i<rs.getFieldNames().size(); i++) {
+			for(int i = 0; i<colSize; i++) {
 				String key = rs.getField(i).name();
 				String val = rs.getField(i).value();
 				testDataMap.put(key, val);
