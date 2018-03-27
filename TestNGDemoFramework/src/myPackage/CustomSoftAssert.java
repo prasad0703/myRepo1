@@ -39,7 +39,7 @@ public class CustomSoftAssert extends SoftAssert {
 		TakesScreenshot tk = (TakesScreenshot) driver;
 		File f = tk.getScreenshotAs(OutputType.FILE);
 		long timeStamp = System.currentTimeMillis();
-		File f1 = new File("src\\TestOutput\\"+timeStamp+".jpg");
+		File f1 = new File("AutomationOutput\\"+timeStamp+".jpg");
 		Files.move(f, f1);
 		System.out.println("Screenshot placed at: "+f1.getAbsolutePath());
 	}
