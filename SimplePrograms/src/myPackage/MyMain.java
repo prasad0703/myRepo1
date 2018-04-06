@@ -12,7 +12,8 @@ public class MyMain {
 		//fibonacci(10);
 		//recursiveFibonacci1(10-2);
 		//System.out.println(recursiveFibonacci2(10));
-		//printTriangle(10);
+		//printTriangle1(10);
+		//printTriangle2(10);
 		//findSecondHighestInArray();
 		//anagrams();
 		//duplicateNoInARange();
@@ -57,12 +58,32 @@ public class MyMain {
 		return recursiveFibonacci2(nmax-1) + recursiveFibonacci2(nmax-2);
 	}
 	//--------------------------------------------------------------
-	public static void printTriangle(int rows) {
+	public static void printTriangle1(int rows) {
 		for(int i=1;i<=rows;i++) {
 			for(int j=1;j<=i;j++) {
 				System.out.print(j); 
 			}
 			System.out.println();
+		}
+	}
+	
+	//--------------------------------------------------------------
+	public static void printTriangle2(int num) {
+		int temp = 1 ;
+		for(int i = 1; i <= num; i++){
+			for(int j = i; j <num; j++)
+				System.out.print(" ");
+			for(int k = 1; k <= i; k++){
+				System.out.print("" +temp+ " ");
+				temp++;
+				if(temp>15){
+					break;
+				}
+			}
+			System.out.println();
+			if(temp>15){
+				break;
+			}
 		}
 	}
 	//--------------------------------------------------------------
