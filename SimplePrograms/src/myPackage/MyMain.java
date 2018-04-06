@@ -12,6 +12,8 @@ public class MyMain {
 		//fibonacci(10);
 		//recursiveFibonacci1(10-2);
 		//System.out.println(recursiveFibonacci2(10));
+		//System.out.println(recursiveFactorial(3));
+		//factorial(3);	
 		//printTriangle1(10);
 		//printTriangle2(10);
 		//findSecondHighestInArray();
@@ -28,7 +30,9 @@ public class MyMain {
 		//bubbleSort();
 		//distinctArrayElements();
 		//sumOfFirstNPrimeNumbers();
-		removeDuplicatesFromSortedArray();
+		//removeDuplicatesFromSortedArray();
+		//addFibonacciSeries()
+		//maxOccuredCharInString("ababaccccbbd");
 		
 	}
 	//--------------------------------------------------------------
@@ -56,6 +60,21 @@ public class MyMain {
 		if(nmax<=1)
 			return nmax;
 		return recursiveFibonacci2(nmax-1) + recursiveFibonacci2(nmax-2);
+	}
+	//--------------------------------------------------------------
+	public static void factorial(int n) {
+		int fact = 1;
+		for(int i=1;i<=n;i++) {
+			fact = fact * i;
+		}
+		System.out.println(fact);
+	}
+	//--------------------------------------------------------------
+	public static int recursiveFactorial(int n) {
+		if(n==0) {
+			return 1;
+		}else
+			return n*recursiveFactorial(n-1);
 	}
 	//--------------------------------------------------------------
 	public static void printTriangle1(int rows) {
@@ -277,6 +296,24 @@ public class MyMain {
 		}
 		arr[j]=arr[arr.length-1];
 		System.out.println(Arrays.toString(arr));
+	}
+	//--------------------------------------------------------------
+	public static void maxOccuredCharInString(String str) {
+		char[] cArray = str.toCharArray();
+		Arrays.sort(cArray);
+		char maxChar = cArray[0];
+		int maxCount = 0;
+		for(int i=0,j=0; i<str.length()-1; i=j) {
+			int count = 1;
+			while(++j<str.length() && cArray[i]==cArray[j]) {
+				count++;
+			}
+			if(count>maxCount) {
+				maxChar = cArray[i];
+				maxCount = count;
+			}
+		}
+		System.out.println("Max Char: "+maxChar+" Count: "+maxCount);
 	}
 
 }
