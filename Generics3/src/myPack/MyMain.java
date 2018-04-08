@@ -34,11 +34,13 @@ public class MyMain {
 	}
 	public static void m3(ArrayList<? extends X> al) {
 		//cannot add anything except null, best suitable for read only
+		//reason:-all children of X might have different implementations of Parent Class. Hence cannot add parent class object
 	}
 	public static void m4(ArrayList<? super X> al) {
 		//if X is class we can call this method by passing arraylist of either X type or
 		//its super classes
 		//we can add X type of objects and null
+		//reason:- X might have all required implementations of Parent Classes. Hence can always add child class object
 	}
 	public static void m5(ArrayList<? super Y> al) {
 		//if Y is interface we can call this method by passing arraylist of either Y type or
