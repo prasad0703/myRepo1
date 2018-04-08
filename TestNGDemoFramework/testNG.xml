@@ -21,7 +21,7 @@
 
 	<test name="ECRMChromeTests">
 		<parameter name="platform" value="Web" />
-		<parameter name="browserName" value="Chrome" />
+		<parameter name="browserName" value="Firefox" />
 		<classes>
 		
 

@@ -29,6 +29,7 @@ public class MyOutputInputStream {
 		FileOutputStream fos2 = new FileOutputStream(".txt");
 		FileOutputStream fos3 = new FileOutputStream(".txt");
 		baos1.write(65);
+		baos1.write("This is string".getBytes());
 		//baos1.flush();
 		baos1.writeTo(fos2);
 		baos1.writeTo(fos3);

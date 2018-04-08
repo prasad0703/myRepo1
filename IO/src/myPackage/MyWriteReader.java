@@ -16,12 +16,14 @@ public class MyWriteReader {
 
 		//--------FileWriter-------
 		FileWriter fw1 = new FileWriter(".txt");//write character oriented data into file
+		fw1.write(65);
 		fw1.write("This is String");
 		fw1.flush();
 		fw1.close();
 		//--------BufferedWriter-------
 		BufferedWriter bw1 = new BufferedWriter(fw1);
 		bw1.newLine();
+		bw1.write(65);
 		bw1.write("This is String");
 		bw1.flush();
 		bw1.close();
@@ -29,6 +31,7 @@ public class MyWriteReader {
 		CharArrayWriter caw1 = new CharArrayWriter();//write common data into char array
 		FileWriter fw2 = new FileWriter(".txt");
 		FileWriter fw3 = new FileWriter(".txt");
+		caw1.write(65);
 		caw1.write("This is String");
 		caw1.writeTo(fw2);
 		caw1.writeTo(fw3);

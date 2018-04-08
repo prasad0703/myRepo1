@@ -1,12 +1,12 @@
 package myPackage;
 
-public class Singleton {
+public final class Singleton {
 	
 	public static Singleton singleton = new Singleton();
 	
 	private Singleton() {}
 	
-	public static Singleton getSingleton() {
+	public static Singleton getInstance() {
 		return singleton;
 	}
 	

@@ -7,9 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.MDC;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
 import org.testng.ITestNGMethod;
 import org.testng.annotations.AfterClass;
@@ -47,10 +49,13 @@ public class BaseClass {
 		if(strBrowserName.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "E:\\Tech\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.manage().window().maximize();
-			driver.get("https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=cJqCWsqbMq-dX57HgZgL");
+		}else if(strBrowserName.equalsIgnoreCase("Firefox")) {
+			System.setProperty("webdriver.gecko.driver", "E:\\Tech\\Drivers\\geckodriver.exe");
+			driver = new FirefoxDriver();
 		}
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get("https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=cJqCWsqbMq-dX57HgZgL");
 	}
 	@BeforeMethod
 	public void beforeMethod(Object[] testArgs) {
@@ -87,6 +92,7 @@ public class BaseClass {
 	@DataProvider(name="myTestDataProvider")
 	public Object[][] testDataProvider(Method m) throws FilloException{
 		String testCaseName = m.getName();
+		MDC.put("testMethodName", testCaseName);
 		Fillo f = new Fillo();
 		System.out.println("Funky Class Name:");
 		System.out.println(this.getClass().getName());
