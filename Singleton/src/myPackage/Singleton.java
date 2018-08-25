@@ -2,7 +2,7 @@ package myPackage;
 
 public final class Singleton {
 	
-	public static Singleton singleton = new Singleton();
+	private static Singleton singleton = new Singleton();
 	
 	private Singleton() {}
 	
