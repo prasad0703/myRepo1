@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CustomAnnotation/CustomAnnotation.iml" filepath="$PROJECT_DIR$/CustomAnnotation/CustomAnnotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExcelOp/ExcelOp.iml" filepath="$PROJECT_DIR$/ExcelOp/ExcelOp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics1/Generics1.iml" filepath="$PROJECT_DIR$/Generics1/Generics1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics2/Generics2.iml" filepath="$PROJECT_DIR$/Generics2/Generics2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics3/Generics3.iml" filepath="$PROJECT_DIR$/Generics3/Generics3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics4/Generics4.iml" filepath="$PROJECT_DIR$/Generics4/Generics4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IO/IO.iml" filepath="$PROJECT_DIR$/IO/IO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterThreadComm1/InterThreadComm1.iml" filepath="$PROJECT_DIR$/InterThreadComm1/InterThreadComm1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBCConnection/JDBCConnection.iml" filepath="$PROJECT_DIR$/JDBCConnection/JDBCConnection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThreadDeadlock/MultiThreadDeadlock.iml" filepath="$PROJECT_DIR$/MultiThreadDeadlock/MultiThreadDeadlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reflections1/Reflections1.iml" filepath="$PROJECT_DIR$/Reflections1/Reflections1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOAPServiceDemo/SOAPServiceDemo.iml" filepath="$PROJECT_DIR$/SOAPServiceDemo/SOAPServiceDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimplePrograms/SimplePrograms.iml" filepath="$PROJECT_DIR$/SimplePrograms/SimplePrograms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Singleton/Singleton.iml" filepath="$PROJECT_DIR$/Singleton/Singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestNGDemoFramework/TestNGDemoFramework.iml" filepath="$PROJECT_DIR$/TestNGDemoFramework/TestNGDemoFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myGitProject1/myGitProject1.iml" filepath="$PROJECT_DIR$/myGitProject1/myGitProject1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/myRepo2.iml" filepath="$PROJECT_DIR$/.idea/myRepo2.iml" />
+    </modules>
+  </component>
+</project>
